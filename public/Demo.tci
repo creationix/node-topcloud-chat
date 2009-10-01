@@ -11,9 +11,10 @@ DataTable width: 200, right: 10, top: 10, bottom: 40
 	checked: @selected_users
 
 TextEntry left: 10, bottom: 10, right: 120, height: 20
-	value: "New message goes here"
+	value: @new_message
 
 Button right: 10, bottom: 10, height: 20, width: 100
 	value: "Send Message"
 	icon: "mail-closed"
+	click: @send_message
 
