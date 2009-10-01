@@ -1,0 +1,19 @@
+Panel left: 10, top: 10, bottom: 40, right: 220
+	borderAll: 5
+	background: "#222"
+	value: "<span class=\"other\">Messages</span>: Go here<br/><span class=\"self\">Self</span>: responses go here<br/>"
+	padding: 10
+	scrollY: "auto"
+
+DataTable width: 200, right: 10, top: 10, bottom: 40
+	columns: {name: "Name"}
+	table_model: @table_model
+	checked: @selected_users
+
+TextEntry left: 10, bottom: 10, right: 120, height: 20
+	value: "New message goes here"
+
+Button right: 10, bottom: 10, height: 20, width: 100
+	value: "Send Message"
+	icon: "mail-closed"
+
