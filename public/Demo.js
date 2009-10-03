@@ -8,7 +8,7 @@ TC.defineController("Demo", function (username) {
 	this.bindData("selected_users", {value: {}});
 	this.bindData("new_message", {value: "Test"});
 	this.bindData("chat_log", {value: format_conversation()});
-	
+	this.bindData("title", {value: "Logged in as\"" + username + "\""});
 	this.table_model = {
 	  get_num_rows: function () {
 	    return 2;

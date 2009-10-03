@@ -1,5 +1,5 @@
 Dialog width: 600, height: 300
-	title: "DinMaker - Chat Room Window"
+	title: @title
 	minWidth: 300
 	minHeight: 200
 
