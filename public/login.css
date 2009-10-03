@@ -1,9 +1,0 @@
-table, #shadow, .ui-widget-shadow { width: 400px; height: 160px; }
-table#login, #shadow { font-size: 15px; position: absolute; top: 50%; left: 50%; margin-top: -80px; margin-left: -200px; }
-table#login td, table#login th { vertical-align: middle; }
-#login tr.ui-state-error { font-size: 12px; }
-#login tr.ui-state-error td { padding: 5px 10px; }
-#login tr.ui-state-error span { float: left; margin-right: 0.3em; }
-#login .ui-widget-header { line-height: 2em; height: 2em; }
-#login button { font-size: 12px; cursor: pointer; line-height: 1em; padding: 2px 5px 2px 2px; }
-#login button .ui-icon { float: left; line-height: 1em; }
