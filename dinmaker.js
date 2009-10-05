@@ -1,4 +1,4 @@
-include('/utils.js');
+node.mixin(require('/utils.js'));
 var server = require("http_server.js");
 var haml = require("haml.js");
 var listeners = {};
