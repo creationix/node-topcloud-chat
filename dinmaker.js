@@ -1,6 +1,7 @@
-node.mixin(require('/utils.js'));
-var server = require("http_server.js");
-var haml = require("haml.js");
+process.mixin(require('sys'));
+var server = require("./node-router");
+var haml = require("./haml");
+var file = require("file");
 var listeners = {};
 var messages = [[Date.now(), 'System', 'Chat Server Started Up']];
 
@@ -49,9 +50,9 @@ server.get(/^(\/.+\.(?:jpg|js|css|png|ico|tci))$/, function (req, res, path) {
 
 // Render the login window
 server.get(/^\/$/, function (req, res) {
- haml.render({}, 'interface.haml', function (html) {
-   res.simpleHtml(200, html);
- });
+  file.read('interface.haml').addCallback(function (text) {
+   res.simpleHtml(200, haml.render(text)); 
+  });
 });
 
 
