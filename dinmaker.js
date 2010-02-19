@@ -50,7 +50,7 @@ server.get(/^(\/.+\.(?:jpg|js|css|png|ico|tci))$/, function (req, res, path) {
 
 // Render the login window
 server.get(/^\/$/, function (req, res) {
-  fs.readFile('interface.haml').addCallback(function (text) {
+  fs.readFile(__dirname + '/interface.haml').addCallback(function (text) {
    res.simpleHtml(200, haml.render(text));
   });
 });
