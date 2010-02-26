@@ -45,12 +45,12 @@ function send_message(req, res, username, message) {
 
 // Serve js, css, and png files as static resources
 server.get(/^(\/.+\.(?:jpg|js|css|png|ico|tci))$/, function (req, res, path) {
- server.staticHandler(req, res, "public" + path);
+ server.staticHandler(req, res, __dirname + "/public" + path);
 });
 
 // Render the login window
 server.get(/^\/$/, function (req, res) {
-  fs.readFile('interface.haml', function (err, text) {
+  fs.readFile(__dirname + '/interface.haml', function (err, text) {
    res.simpleHtml(200, haml.render(text));
   });
 });
@@ -62,4 +62,4 @@ server.post(/^\/listen\/([^\/]*)$/, long_poll, 'json');
 // Handle new messages
 server.post(/^\/message\/([^\/]*)$/, send_message, 'plain');
 
-server.listen(9292);
+server.listen(7000);
